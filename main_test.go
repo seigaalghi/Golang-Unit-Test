@@ -16,11 +16,11 @@ func performRequest(r http.Handler, method, path string) *httptest.ResponseRecor
 	return w
 }
 func TestHelloWorld(test *testing.T) {
+	// Create response and expected struct
 	type structure struct {
 		Hello string
 		Array []string
 	}
-
 	// Build our expected body
 	body := structure{
 		Hello: "world",
